@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +19,7 @@ body {
     justify-content: center;
     text-transform: capitalize;
     color: aliceblue;
+    font-family: "Press Start 2P", system-ui;
 }
 
 .container {
@@ -55,6 +58,7 @@ body {
 
 input,
 button {
+    font-family: "Press Start 2P", system-ui;
     text-transform: capitalize;
     color: aliceblue;
     border-radius: 12px;
