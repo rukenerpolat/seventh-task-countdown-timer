@@ -8,6 +8,8 @@
 
 </div> 
 
+<img width="1917" height="1027" alt="07" src="https://github.com/user-attachments/assets/9ceafbc5-6de7-426a-8fca-d7e894114660" />
+
 A simple yet stylish countdown timer built with **HTML**, **CSS**, and **JavaScript**.  
 Users can enter any time (in seconds), start the countdown, reset it anytime or adjust the time using custom `+` and `–` buttons.
 
