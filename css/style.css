@@ -110,6 +110,30 @@ body {
     margin: 10px 0;
 }
 
+.card button,
+.actions button {
+    width: 100%;
+    font-family: "Press Start 2P", system-ui;
+    text-transform: capitalize;
+    color: aliceblue;
+    border-radius: 12px;
+    padding: 16px 8px;
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card button:hover,
+.actions button:hover {
+    background: rgba(255, 255, 255, 0.35);
+    border-color: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+
 p {
     font-size: clamp(1.2rem, 5vw, 2rem);
     margin-top: 20px;
