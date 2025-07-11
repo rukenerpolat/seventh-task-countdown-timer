@@ -10,16 +10,18 @@
 <body>
     <div class="container">
         <h1>Countdown Timer</h1>
-
         <div class="card">
-            <input type="number" id="timeInput" placeholder="enter time..." min="1">
+            <input type="number" id="timeInput" placeholder="enter time..." min="1" />
+            <button id="decreaseBtn">–</button>
+            <button id="increaseBtn">+</button>
+        </div>
+        
+        <div class="actions">
             <button id="startBtn">start</button>
             <button id="resetBtn">reset</button>
         </div>
-        
         <p id="countdown">0</p>
     </div>
-
     <script src="/js/main.js"></script>
 </body>
 </html>

@@ -6,29 +6,46 @@ const startBtn = document.getElementById('startBtn');
 const resetBtn = document.getElementById('resetBtn');
 const countdownDisplay = document.getElementById('countdown');
 
-startBtn.addEventListener('click', function() {
-    const inputTime = parseInt(timeInput.value);
+const decreaseBtn = document.getElementById('decreaseBtn');
+const increaseBtn = document.getElementById('increaseBtn');
 
-    if (isNaN(inputTime) || inputTime <= 0) {
-      alert('Please enter a valid time.');
-      return;
+startBtn.addEventListener('click', function() {
+  const inputTime = parseInt(timeInput.value);
+
+  if (isNaN(inputTime) || inputTime <= 0) {
+    alert('Please enter a valid time.');
+    return;
+  }
+
+  timeLeft = inputTime;
+  countdownDisplay.textContent = timeLeft;
+
+  clearInterval(countdown);
+  countdown = setInterval(function() {
+    timeLeft--;
+    if (timeLeft <= 0) {
+      clearInterval(countdown);
+      countdownDisplay.textContent = 'Time is up!';
+    } else {
+      countdownDisplay.textContent = timeLeft;
     }
-    timeLeft = inputTime;
-    countdownDisplay.textContent = timeLeft;
-    clearInterval(countdown);
-    countdown = setInterval(function() {
-      timeLeft--;
-      if (timeLeft <= 0) {
-        clearInterval(countdown);
-        countdownDisplay.textContent = 'Time is up!';
-      } else {
-        countdownDisplay.textContent = timeLeft;
-      }
-    }, 1000);
+  }, 1000);
 });
 
 resetBtn.addEventListener('click', function() {
-    clearInterval(countdown);
-    countdownDisplay.textContent = 0;
-    timeInput.value = '';
+  clearInterval(countdown);
+  countdownDisplay.textContent = 0;
+  timeInput.value = '';
+});
+
+decreaseBtn.addEventListener('click', () => {
+  let current = parseInt(timeInput.value) || 0;
+  if (current > 1) {
+    timeInput.value = current - 1;
+  }
+});
+
+increaseBtn.addEventListener('click', () => {
+  let current = parseInt(timeInput.value) || 0;
+  timeInput.value = current + 1;
 });
